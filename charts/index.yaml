@@ -11,5 +11,8 @@ entries:
     type: application
     urls:
     - charts/stable-diffusion-1.0.6.tgz
+    keywords:
+      - stable-diffusion
+      - sd
     version: 1.0.6
 generated: "2023-08-13T19:46:30.910031+08:00"
