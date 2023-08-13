@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "stable-diffusion.fullname" . }}
+  labels:
+    {{- include "stable-diffusion.labels" . | nindent 4 }}
+spec:
+  serviceName: {{ include "stable-diffusion.fullname" . }}
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "stable-diffusion.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "stable-diffusion.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "stable-diffusion.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}-stable-diffusion
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "stable-diffusion.fullname" . }}-config
+          ports:
+            - name: http
+              containerPort: 7860
+              protocol: TCP
+          volumeMounts:
+            - name: models
+              mountPath: /stable-diffusion-webui/models
+            - name: extensions
+              mountPath: /stable-diffusion-webui/extensions
+            - name: outputs
+              mountPath: /stable-diffusion-webui/outputs
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        - name: models
+          hostPath:
+            path: {{ .Values.persistence.volumes.models }}
+        - name: extensions
+          hostPath:
+            path: {{ .Values.persistence.volumes.extensions }}
+        - name: outputs
+          hostPath:
+            path: {{ .Values.persistence.volumes.outputs }}
