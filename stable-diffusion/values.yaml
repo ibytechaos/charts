@@ -5,15 +5,14 @@
 replicaCount: 1
 
 image:
-  repository: universonic/stable-diffusion-webui
+  repository: siutin/stable-diffusion-webui-docker
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "cuda-v1.5.1-2023-08-02"
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-cliFlags: "--extra-models-cpu --optimized-turbo"
 
 persistence:
   annotations: {}
@@ -28,8 +27,8 @@ persistence:
   size: 8Gi
   volumes:
     models: /data/sd/models
-    extensions: /data/extensions
-    outputs: /data/outputs
+    extensions: /data/sd/extensions
+    outputs: /data/sd/outputs
 
 
 serviceAccount:
@@ -75,7 +74,9 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources:
+  limits:
+  nvidia.com/gpu: 2
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
@@ -93,9 +94,6 @@ autoscaling:
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
-
-nodeSelector: 
-  nvidia.com/gpu.present: "true"
 
 tolerations: []
 
