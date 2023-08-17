@@ -3,7 +3,18 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-08-18T00:29:26.78967+08:00"
+    created: "2023-08-18T07:52:42.152782+08:00"
+    description: Packaged Stable Diffusion with a companion UI and automatic model
+      retrieval
+    digest: e703a6bdf01300b6487e00f3ea00b3ad19f3a14b2d821c84564a235a42cbf3a1
+    name: stable-diffusion
+    type: application
+    urls:
+    - charts/stable-diffusion-1.0.9.tgz
+    version: 1.0.9
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2023-08-18T07:52:42.152508+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: 0c1f32ea2b8e6f9051aa2b4aa47c8f4bd49366255be4b5c49c67634575929b32
@@ -14,7 +25,7 @@ entries:
     version: 1.0.8
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-08-18T00:29:26.789357+08:00"
+    created: "2023-08-18T07:52:42.15206+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: 011621f61610c3da8b62742d5ad84a42e81651ca054a920489ea7df70db4f8e4
@@ -25,7 +36,7 @@ entries:
     version: 1.0.7
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-08-18T00:29:26.787841+08:00"
+    created: "2023-08-18T07:52:42.1515+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: e04776c976fc2196e61bd54bf2fed708c4b3538fe3f73fdc202ea1be682d26c3
@@ -34,4 +45,4 @@ entries:
     urls:
     - charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2023-08-18T00:29:26.787395+08:00"
+generated: "2023-08-18T07:52:42.151039+08:00"
