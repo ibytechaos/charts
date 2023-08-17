@@ -33,7 +33,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- if .Values.debug }}
-          command: [ "tail -f /dev/null" ]
+          command: [ "tail" ]
+          args: [ "-f" ]
           {{ else }}
           command: [ "webui.sh" ]
           args: [ "--share" ]
