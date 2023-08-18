@@ -37,7 +37,7 @@ spec:
           args: [ "-f" ]
           {{ else }}
           command: [ "./webui.sh" ]
-          args: [ "--server-name 0.0.0.0" ]
+          args: [ "--server-name", "0.0.0.0" ]
           {{- end }}
           envFrom:
             - configMapRef:
