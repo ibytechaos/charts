@@ -36,8 +36,8 @@ spec:
           command: [ "tail" ]
           args: [ "-f" ]
           {{ else }}
-          command: [ "webui.sh" ]
-          args: [ "--share" ]
+          command: [ "./webui.sh" ]
+          args: [ "--server-name 0.0.0.0" ]
           {{- end }}
           envFrom:
             - configMapRef:
