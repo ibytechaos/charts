@@ -37,7 +37,10 @@ spec:
           args: [ "-f" ]
           {{ else }}
           command: [ "./webui.sh" ]
-          args: {{ .Values.args }}
+          args:
+            {{  range .Values.args }}
+            - {{ . }}
+            {{ end }}
           {{- end }}
           envFrom:
             - configMapRef:
