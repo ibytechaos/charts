@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 debug: false
 replicaCount: 1
-
+args: [ "--server-name", "0.0.0.0", "--enable-insecure-extension-access", "-–device-id", "0,1" ]
 image:
   repository: siutin/stable-diffusion-webui-docker
   pullPolicy: IfNotPresent
@@ -29,6 +29,7 @@ persistence:
     models: /data/sd/models
     extensions: /data/sd/extensions
     outputs: /data/sd/outputs
+    repositories: /data/sd/repositories
 
 
 serviceAccount:

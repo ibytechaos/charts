@@ -37,7 +37,7 @@ spec:
           args: [ "-f" ]
           {{ else }}
           command: [ "./webui.sh" ]
-          args: [ "--server-name", "0.0.0.0", "--enable-insecure-extension-access" ]
+          args: {{ .Values.args }}
           {{- end }}
           envFrom:
             - configMapRef:
@@ -53,6 +53,8 @@ spec:
               mountPath: /app/stable-diffusion-webui/extensions
             - name: outputs
               mountPath: /app/stable-diffusion-webui/outputs
+            - name: repositories
+              mountPath: /app/stable-diffusion-webui/repositories
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -77,3 +79,6 @@ spec:
         - name: outputs
           hostPath:
             path: {{ .Values.persistence.volumes.outputs }}
+        - name: repositories
+          hostPath:
+            path: {{ .Values.persistence.volumes.repositories }}
