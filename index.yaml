@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  go-chatgpt-api:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-25T21:49:35.760872+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 32187afae602667452b21106f3983a78ff4f24e1eea426a5af7d9f7bac3cdaa5
+    name: go-chatgpt-api
+    type: application
+    urls:
+    - charts/go-chatgpt-api-0.1.0.tgz
+    version: 0.1.0
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-08-19T00:45:24.295612+08:00"
+    created: "2023-08-25T21:49:35.761148+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: 7b86b72eaa6c017d31941abd05a59b87b5814a9505da4592eba78fb49e0adbcb
@@ -12,4 +23,4 @@ entries:
     urls:
     - charts/stable-diffusion-1.0.18.tgz
     version: 1.0.18
-generated: "2023-08-19T00:45:24.295238+08:00"
+generated: "2023-08-25T21:49:35.760483+08:00"
