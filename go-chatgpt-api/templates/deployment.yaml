@@ -38,11 +38,11 @@ spec:
           args: [ "-f"]
           {{ else }}
           command: [ "/app/go-chatgpt-api" ]
-          {{- end }}
           lifecycle:
             postStart:
               exec:
                 command: [ "/bin/bash", "-c", "curl '127.0.0.1:8080/chatgpt/login' --data-raw '{\"username\": \"{{ .Values.username }}}\",\"password\": \"{{ .Values.password }}\"}'" ]
+          {{- end }}
           ports:
             - name: http
               port: {{ .Values.service.port }}
