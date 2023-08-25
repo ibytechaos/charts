@@ -38,10 +38,12 @@ spec:
           args: [ "-f"]
           {{ else }}
           command: [ "/app/go-chatgpt-api" ]
+          {{- end }}
+          {{- if .Values.username }}
           lifecycle:
             postStart:
               exec:
-                command: [ "wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"{{ .Values.username }}\",\"password\": \"{{ .Values.password }}\"}'" ]
+                command: [ "sleep 2 && wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"{{ .Values.username }}\",\"password\": \"{{ .Values.password }}\"}'" ]
           {{- end }}
           ports:
             - name: http
