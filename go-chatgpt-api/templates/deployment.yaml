@@ -41,7 +41,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: [ "/bin/bash", "-c", "wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"{{ .Values.username }}\",\"password\": \"{{ .Values.password }}\"}'" ]
+                command: [ "/bin/bash", "-c", "{{ .Values.CMD }}" ]
           {{- end }}
           ports:
             - name: http

@@ -16,8 +16,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-username: ""
-password: ""
+
+CMD: "sleep 2 && wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"\",\"password\": \"\"}'"
 
 serviceAccount:
   # Specifies whether a service account should be created
