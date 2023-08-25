@@ -33,7 +33,12 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.debug }}
+          command: [ "tail" ]
+          args: [ "-f"]
+          {{ else }}
           command: [ "/app/go-chatgpt-api" ]
+          {{- end }}
           lifecycle:
             postStart:
               exec:
@@ -43,14 +48,6 @@ spec:
               port: {{ .Values.service.port }}
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

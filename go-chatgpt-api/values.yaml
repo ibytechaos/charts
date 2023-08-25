@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+debug: true
+
 image:
   repository: linweiyuan/go-chatgpt-api
   pullPolicy: IfNotPresent
