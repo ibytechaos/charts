@@ -41,13 +41,21 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: [ "/bin/bash", "-c", "curl '127.0.0.1:8080/chatgpt/login' --data-raw '{\"username\": \"{{ .Values.username }}}\",\"password\": \"{{ .Values.password }}\"}'" ]
+                command: [ "/bin/bash", "-c", "wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"{{ .Values.username }}\",\"password\": \"{{ .Values.password }}\"}'" ]
           {{- end }}
           ports:
             - name: http
               port: {{ .Values.service.port }}
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
