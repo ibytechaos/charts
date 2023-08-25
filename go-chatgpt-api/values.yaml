@@ -4,7 +4,7 @@
 
 replicaCount: 1
 
-debug: true
+debug: false
 
 image:
   repository: linweiyuan/go-chatgpt-api
@@ -16,8 +16,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-
-CMD: "sleep 2 && wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"\",\"password\": \"\"}'"
+username: ""
+password: ""
 
 serviceAccount:
   # Specifies whether a service account should be created

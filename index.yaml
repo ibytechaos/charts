@@ -3,7 +3,17 @@ entries:
   go-chatgpt-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-25T22:29:31.960022+08:00"
+    created: "2023-08-25T22:41:59.944542+08:00"
+    description: A Helm chart for Kubernetes
+    digest: bcc30dcba16b549269149a53c19e27e9373b2432a974938707a36cb72d316c83
+    name: go-chatgpt-api
+    type: application
+    urls:
+    - charts/go-chatgpt-api-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-25T22:41:59.944334+08:00"
     description: A Helm chart for Kubernetes
     digest: bcba240a364074425c7b95a93cdaadc12f56a0b5bdee97681c014b0e6974e01b
     name: go-chatgpt-api
@@ -13,7 +23,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-25T22:29:31.959786+08:00"
+    created: "2023-08-25T22:41:59.944109+08:00"
     description: A Helm chart for Kubernetes
     digest: 0b0a320544fb008772d6b4067fe4e38d7792cf71f50904d6b83a03b8e5187897
     name: go-chatgpt-api
@@ -23,7 +33,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-25T22:29:31.959547+08:00"
+    created: "2023-08-25T22:41:59.943885+08:00"
     description: A Helm chart for Kubernetes
     digest: 7f81a54e4cc513b23acdd4da2ad0a0700f29ee63a57797d825772bd0d55fc02f
     name: go-chatgpt-api
@@ -33,7 +43,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-25T22:29:31.959324+08:00"
+    created: "2023-08-25T22:41:59.943654+08:00"
     description: A Helm chart for Kubernetes
     digest: 487bff09023013c05931673adb11cc23415b9cc9047e596e28f32a66e9a46eb2
     name: go-chatgpt-api
@@ -43,7 +53,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-08-25T22:29:31.959084+08:00"
+    created: "2023-08-25T22:41:59.943411+08:00"
     description: A Helm chart for Kubernetes
     digest: 32187afae602667452b21106f3983a78ff4f24e1eea426a5af7d9f7bac3cdaa5
     name: go-chatgpt-api
@@ -54,7 +64,7 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-08-25T22:29:31.960285+08:00"
+    created: "2023-08-25T22:41:59.944798+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: 7b86b72eaa6c017d31941abd05a59b87b5814a9505da4592eba78fb49e0adbcb
@@ -63,4 +73,4 @@ entries:
     urls:
     - charts/stable-diffusion-1.0.18.tgz
     version: 1.0.18
-generated: "2023-08-25T22:29:31.958748+08:00"
+generated: "2023-08-25T22:41:59.943068+08:00"
