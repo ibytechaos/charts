@@ -34,6 +34,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/bin/sh" "-c" "node server.js"]
+          env:
+            - name: BASE_URL
+              value: {{ .Values.baseUrl }}
           ports:
             - name: http
               containerPort: 3000

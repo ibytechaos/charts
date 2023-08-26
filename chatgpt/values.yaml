@@ -36,6 +36,8 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+baseUrl: "http://chatgpt-api.default.svc.cluster.local:8080"
+
 service:
   type: NodePort
   port: 3000
