@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "go-chatgpt-api.fullname" . }}
+  name: {{ include "chatgpt.fullname" . }}
   labels:
-    {{- include "go-chatgpt-api.labels" . | nindent 4 }}
+    {{- include "chatgpt.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "go-chatgpt-api.selectorLabels" . | nindent 6 }}
+      {{- include "chatgpt.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "go-chatgpt-api.selectorLabels" . | nindent 8 }}
+        {{- include "chatgpt.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "go-chatgpt-api.serviceAccountName" . }}
+      serviceAccountName: {{ include "chatgpt.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -33,21 +33,10 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- if .Values.debug }}
-          command: [ "tail" ]
-          args: [ "-f"]
-          {{ else }}
-          command: [ "/app/go-chatgpt-api" ]
-          {{- end }}
-          {{- if .Values.username }}
-          lifecycle:
-            postStart:
-              exec:
-                command: [ "sleep 2 && wget '127.0.0.1:8080/chatgpt/login' --post-data='{\"username\": \"{{ .Values.username }}\",\"password\": \"{{ .Values.password }}\"}'" ]
-          {{- end }}
+          command: ["/bin/sh" "-c" "node server.js"]
           ports:
             - name: http
-              containerPort: {{ .Values.service.port }}
+              containerPort: 3000
               protocol: TCP
           livenessProbe:
             httpGet:
