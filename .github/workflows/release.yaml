@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir -p charts
           mv *.tgz charts/ || true
-          helm repo index . --url https://wuzhipeng.github.io/charts
+          helm repo index . --url https://ibytechaos.github.io/charts
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

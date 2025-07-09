@@ -3,44 +3,44 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T07:42:47.719907+08:00"
+    created: "2025-07-10T07:49:20.122159+08:00"
     description: A Helm chart for Mantrae application
     digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
     type: application
     urls:
-    - https://wuzhipeng.github.io/charts/charts/mantrae-1.0.2.tgz
+    - https://ibytechaos.github.io/charts/charts/mantrae-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T07:42:47.719657+08:00"
+    created: "2025-07-10T07:49:20.121912+08:00"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
     type: application
     urls:
-    - https://wuzhipeng.github.io/charts/charts/mantrae-1.0.1.tgz
+    - https://ibytechaos.github.io/charts/charts/mantrae-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T07:42:47.719373+08:00"
+    created: "2025-07-10T07:49:20.121635+08:00"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
     type: application
     urls:
-    - https://wuzhipeng.github.io/charts/charts/mantrae-1.0.0.tgz
+    - https://ibytechaos.github.io/charts/charts/mantrae-1.0.0.tgz
     version: 1.0.0
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-10T07:42:47.720162+08:00"
+    created: "2025-07-10T07:49:20.122466+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: e04776c976fc2196e61bd54bf2fed708c4b3538fe3f73fdc202ea1be682d26c3
     name: stable-diffusion
     type: application
     urls:
-    - https://wuzhipeng.github.io/charts/charts/stable-diffusion-1.0.6.tgz
+    - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-10T07:42:47.718516+08:00"
+generated: "2025-07-10T07:49:20.121281+08:00"
