@@ -1,0 +1,36 @@
+apiVersion: v1
+entries:
+  mantrae:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-07-09T23:40:22.233368498Z"
+    description: A Helm chart for Mantrae application
+    digest: 15335c93fcf019c5af69d3590eb950642767ae12a867e3c127d66315415849e4
+    name: mantrae
+    type: application
+    urls:
+    - https://wuzhipeng.github.io/charts/charts/mantrae-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-07-09T23:40:22.232983042Z"
+    description: A Helm chart for Mantrae application
+    digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
+    name: mantrae
+    type: application
+    urls:
+    - https://wuzhipeng.github.io/charts/charts/mantrae-1.0.0.tgz
+    version: 1.0.0
+  stable-diffusion:
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2025-07-09T23:40:22.233717526Z"
+    description: Packaged Stable Diffusion with a companion UI and automatic model
+      retrieval
+    digest: 4f8eb122614a0d58d11ab3621f03f812b35e1ef6a98972f89446d7fde952ec86
+    name: stable-diffusion
+    type: application
+    urls:
+    - https://wuzhipeng.github.io/charts/charts/stable-diffusion-1.0.6.tgz
+    version: 1.0.6
+generated: "2025-07-09T23:40:22.232516552Z"
