@@ -3,9 +3,9 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T00:09:03.951616963Z"
+    created: "2025-07-10T00:12:20.706593403Z"
     description: A Helm chart for Mantrae application
-    digest: ef3318c51e5217995240fe48b2f768f731e3b7467235cff6a42cf8a415297186
+    digest: 3758e43ef7a2a953d24f70b9d3b037c12f0926821bd868e66d8a79840f60d849
     name: mantrae
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T00:09:03.950978769Z"
+    created: "2025-07-10T00:12:20.706245438Z"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -23,7 +23,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T00:09:03.950612654Z"
+    created: "2025-07-10T00:12:20.705865933Z"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -34,13 +34,13 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-10T00:09:03.952546366Z"
+    created: "2025-07-10T00:12:20.706957849Z"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
-    digest: ec154fc8b2714b3dd584c61f65bb46ba03790515d5b89873e0ab74fa094f94b7
+    digest: c82142884b4730385d4975455193bbf5231d8f1564274fb15f0114fa07f50f9a
     name: stable-diffusion
     type: application
     urls:
     - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-10T00:09:03.950094444Z"
+generated: "2025-07-10T00:12:20.705391229Z"
