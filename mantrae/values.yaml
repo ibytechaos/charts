@@ -94,3 +94,32 @@ persistence:
   size: 10Gi
   # Path where the volume should be mounted in the container
   mountPath: /data
+
+# Environment variables
+env:
+  # Plain text environment variables
+  # Example:
+  # NODE_ENV: production
+  # PORT: "3000"
+
+# Secret configuration
+secret:
+  # Create a secret with the chart
+  create: true
+  # Name of the secret (if not created by chart, specify existing secret name)
+  name: ""
+  # Secret data (key-value pairs)
+  data: {}
+    # Example:
+    # API_KEY: "your-api-key"
+    # DATABASE_PASSWORD: "your-password"
+
+# Reference to existing secrets
+existingSecrets: []
+  # Example:
+  # - name: external-secret
+  #   keys:
+  #     - key: api-key
+  #       env: API_KEY
+  #     - key: db-password
+  #       env: DATABASE_PASSWORD

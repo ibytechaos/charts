@@ -45,6 +45,31 @@ spec:
             httpGet:
               path: /
               port: http
+          {{- if or .Values.env .Values.secret.create .Values.existingSecrets }}
+          env:
+            {{- range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+            {{- if .Values.secret.create }}
+            {{- range $key, $value := .Values.secret.data }}
+            - name: {{ $key }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mantrae.secretName" $ }}
+                  key: {{ $key }}
+            {{- end }}
+            {{- end }}
+            {{- range .Values.existingSecrets }}
+            {{- range .keys }}
+            - name: {{ .env }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $.name }}
+                  key: {{ .key }}
+            {{- end }}
+            {{- end }}
+          {{- end }}
           {{- if .Values.persistence.enabled }}
           volumeMounts:
             - name: data

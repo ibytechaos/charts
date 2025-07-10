@@ -3,9 +3,19 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T00:12:20.706593403Z"
+    created: "2025-07-10T00:19:58.083666596Z"
     description: A Helm chart for Mantrae application
-    digest: 3758e43ef7a2a953d24f70b9d3b037c12f0926821bd868e66d8a79840f60d849
+    digest: 02f82d5bc69936e509ee85f33d5f626882fd349d247fe49c1d1103e32458f521
+    name: mantrae
+    type: application
+    urls:
+    - https://ibytechaos.github.io/charts/charts/mantrae-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-07-10T00:19:58.0832654Z"
+    description: A Helm chart for Mantrae application
+    digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
     type: application
     urls:
@@ -13,7 +23,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T00:12:20.706245438Z"
+    created: "2025-07-10T00:19:58.082886165Z"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -23,7 +33,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-10T00:12:20.705865933Z"
+    created: "2025-07-10T00:19:58.082510356Z"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -34,13 +44,13 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-10T00:12:20.706957849Z"
+    created: "2025-07-10T00:19:58.084021074Z"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
-    digest: c82142884b4730385d4975455193bbf5231d8f1564274fb15f0114fa07f50f9a
+    digest: 4f91f2cdda1f33ee257bbc310455af2ca05923f969936a241c10db0325b39c0c
     name: stable-diffusion
     type: application
     urls:
     - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-10T00:12:20.705391229Z"
+generated: "2025-07-10T00:19:58.081979545Z"
