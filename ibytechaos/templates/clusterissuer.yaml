@@ -1,0 +1,53 @@
+{{- if .Values.clusterIssuer.create -}}
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: {{ .Values.clusterIssuer.name }}
+  {{- with .Values.labels }}
+  labels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  labels:
+    {{- include "ibytechaos.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  acme:
+    # ACME server URL
+    server: {{ .Values.clusterIssuer.server }}
+    # Email address for ACME registration
+    email: {{ .Values.clusterIssuer.email }}
+    # Private key secret reference
+    privateKeySecretRef:
+      name: {{ .Values.clusterIssuer.privateKeySecretRef }}
+    # ACME challenge solvers
+    solvers:
+    {{- range .Values.clusterIssuer.solvers }}
+    - {{- if .http01 }}
+      http01:
+        ingress:
+          class: {{ .http01.ingress.class }}
+      {{- end }}
+      {{- if .dns01 }}
+      dns01:
+        {{- toYaml .dns01 | nindent 8 }}
+      {{- end }}
+      {{- if .selector }}
+      selector:
+        {{- if .selector.dnsNames }}
+        dnsNames:
+        {{- range .selector.dnsNames }}
+        - {{ . | quote }}
+        {{- end }}
+        {{- end }}
+        {{- if .selector.dnsZones }}
+        dnsZones:
+        {{- range .selector.dnsZones }}
+        - {{ . | quote }}
+        {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+{{- end }}

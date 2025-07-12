@@ -1,0 +1,83 @@
+# Default values for ibytechaos.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# ClusterIssuer configuration
+clusterIssuer:
+  # Whether to create a ClusterIssuer
+  create: true
+  # Name of the ClusterIssuer
+  name: "ibytechaos-issuer"
+  # ACME server URL (Let's Encrypt production by default)
+  server: "https://acme-v02.api.letsencrypt.org/directory"
+  # Contact email for certificate notifications
+  email: "wu.zhi.peng@outlook.com"
+  # Private key secret name for ACME account
+  privateKeySecretRef: "ibytechaos-issuer-key"
+  # ACME challenge solver configuration
+  solvers:
+    # HTTP01 solver using traefik ingress
+    - http01:
+        ingress:
+          class: traefik
+      # Selector for domains this solver applies to
+      selector:
+        dnsNames:
+        - "*.ibytechaos.com"
+        - "ibytechaos.com"
+
+# Certificate configuration
+certificate:
+  # Whether to create a Certificate resource
+  create: true
+  # Certificate name
+  name: "ibytechaos-tls"
+  # Certificate secret name where TLS cert will be stored
+  secretName: "ibytechaos-tls-secret"
+  # Certificate issuer reference
+  issuerRef:
+    name: "ibytechaos-issuer"
+    kind: ClusterIssuer
+    group: cert-manager.io
+  # Common name for the certificate
+  commonName: "*.ibytechaos.com"
+  # DNS names covered by this certificate
+  dnsNames:
+    - "*.ibytechaos.com"
+    - "ibytechaos.com"
+  # Certificate duration (90 days by default)
+  duration: "2160h" # 90 days
+  # Certificate renewal time (30 days before expiry)
+  renewBefore: "720h" # 30 days
+  # Subject configuration
+  subject:
+    organizations:
+      - "IByteChaos"
+    countries:
+      - "US"
+    organizationalUnits:
+      - "IT Department"
+    localities:
+      - "San Francisco"
+    provinces:
+      - "CA"
+
+# Global settings
+global:
+  # Domain name
+  domain: "ibytechaos.com"
+  # Wildcard domain
+  wildcardDomain: "*.ibytechaos.com"
+
+# Namespace configuration
+namespace:
+  # Create namespace if it doesn't exist
+  create: false
+  # Namespace name (if empty, uses release namespace)
+  name: ""
+
+# Additional labels to add to all resources
+labels: {}
+
+# Additional annotations to add to all resources  
+annotations: {}
