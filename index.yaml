@@ -3,10 +3,34 @@ entries:
   ibytechaos:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T12:33:07.097218939Z"
+    created: "2025-07-12T12:39:22.748311118Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
-    digest: 7c5d50caca10db98531638c14bb372094be82d4072706a2d77aa0a9a9f3a7602
+    digest: a76d00643b69143cf1c4c4db58a40d5f9d63dd2010ba42fb3633db1b83d16a71
+    home: https://ibytechaos.com
+    keywords:
+    - certificate
+    - cert-manager
+    - traefik
+    - https
+    - wildcard
+    maintainers:
+    - name: ibytechaos
+      url: https://ibytechaos.com
+    name: ibytechaos
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - https://ibytechaos.github.io/charts/charts/ibytechaos-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-12T12:39:22.747777389Z"
+    description: Certificate management chart for ibytechaos.com with traefik and
+      cert-manager integration
+    digest: 24652c0fdf91dc67dffa7efe48cbafbd04ba45cdbeffcce4dfeae88d38951cfc
     home: https://ibytechaos.com
     keywords:
     - certificate
@@ -28,9 +52,9 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T12:33:07.099753848Z"
+    created: "2025-07-12T12:39:22.750319969Z"
     description: A Helm chart for Mantrae application
-    digest: 010effa256e75c148653df789c443e7194e96eaee18e857686d68c973b71057c
+    digest: 424633dd45c882ad5e2b1fb2c8b941595b0be98c468e5e5b596d186475f7d9c9
     name: mantrae
     type: application
     urls:
@@ -38,7 +62,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T12:33:07.099162433Z"
+    created: "2025-07-12T12:39:22.749325617Z"
     description: A Helm chart for Mantrae application
     digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
@@ -48,7 +72,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T12:33:07.09851723Z"
+    created: "2025-07-12T12:39:22.749000178Z"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -58,7 +82,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T12:33:07.097859453Z"
+    created: "2025-07-12T12:39:22.748628883Z"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -69,13 +93,13 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-12T12:33:07.100734652Z"
+    created: "2025-07-12T12:39:22.750953435Z"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
-    digest: 199c2b29c4e1235944e2098b430c263ac4c8a3c53ce7581a9b18c39b9b0e85fd
+    digest: 87d95c2b1bbede7a2559909ad1c1b9159269c895dd38537752f935f8135658b1
     name: stable-diffusion
     type: application
     urls:
     - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-12T12:33:07.096140581Z"
+generated: "2025-07-12T12:39:22.747227018Z"

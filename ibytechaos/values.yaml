@@ -49,6 +49,8 @@ certificate:
   duration: "2160h" # 90 days
   # Certificate renewal time (30 days before expiry)
   renewBefore: "720h" # 30 days
+  # Private key rotation policy (Never, Always)
+  rotationPolicy: "Never"
   # Subject configuration
   subject:
     organizations:
