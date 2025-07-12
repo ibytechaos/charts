@@ -1,0 +1,86 @@
+{{- if .Values.certificate.create -}}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.certificate.name }}
+  namespace: {{ .Release.Namespace }}
+  {{- with .Values.labels }}
+  labels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  labels:
+    {{- include "ibytechaos.labels" . | nindent 4 }}
+  {{- with .Values.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  # Secret name where the certificate will be stored
+  secretName: {{ .Values.certificate.secretName }}
+  
+  # Certificate issuer reference
+  issuerRef:
+    name: {{ .Values.certificate.issuerRef.name }}
+    kind: {{ .Values.certificate.issuerRef.kind }}
+    group: {{ .Values.certificate.issuerRef.group }}
+  
+  # Common name for the certificate
+  commonName: {{ .Values.certificate.commonName | quote }}
+  
+  # DNS names covered by this certificate
+  dnsNames:
+  {{- range .Values.certificate.dnsNames }}
+  - {{ . | quote }}
+  {{- end }}
+  
+  # Certificate duration
+  {{- if .Values.certificate.duration }}
+  duration: {{ .Values.certificate.duration }}
+  {{- end }}
+  
+  # Certificate renewal time
+  {{- if .Values.certificate.renewBefore }}
+  renewBefore: {{ .Values.certificate.renewBefore }}
+  {{- end }}
+  
+  # Subject configuration
+  {{- if .Values.certificate.subject }}
+  subject:
+    {{- if .Values.certificate.subject.organizations }}
+    organizations:
+    {{- range .Values.certificate.subject.organizations }}
+    - {{ . | quote }}
+    {{- end }}
+    {{- end }}
+    {{- if .Values.certificate.subject.countries }}
+    countries:
+    {{- range .Values.certificate.subject.countries }}
+    - {{ . | quote }}
+    {{- end }}
+    {{- end }}
+    {{- if .Values.certificate.subject.organizationalUnits }}
+    organizationalUnits:
+    {{- range .Values.certificate.subject.organizationalUnits }}
+    - {{ . | quote }}
+    {{- end }}
+    {{- end }}
+    {{- if .Values.certificate.subject.localities }}
+    localities:
+    {{- range .Values.certificate.subject.localities }}
+    - {{ . | quote }}
+    {{- end }}
+    {{- end }}
+    {{- if .Values.certificate.subject.provinces }}
+    provinces:
+    {{- range .Values.certificate.subject.provinces }}
+    - {{ . | quote }}
+    {{- end }}
+    {{- end }}
+  {{- end }}
+  
+  # Key encoding and algorithm
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+{{- end }}

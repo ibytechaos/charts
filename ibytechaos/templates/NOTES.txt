@@ -1,0 +1,49 @@
+{{- if .Values.clusterIssuer.create }}
+✅ ClusterIssuer "{{ .Values.clusterIssuer.name }}" has been created.
+{{- end }}
+
+{{- if .Values.certificate.create }}
+✅ Certificate "{{ .Values.certificate.name }}" has been created for:
+   - {{ .Values.certificate.commonName }}
+   {{- range .Values.certificate.dnsNames }}
+   - {{ . }}
+   {{- end }}
+
+📦 The certificate will be stored in secret: {{ .Values.certificate.secretName }}
+{{- end }}
+
+🔧 Usage Instructions:
+1. Wait for cert-manager to issue the certificate (this may take a few minutes)
+2. Check certificate status: kubectl get certificate {{ .Values.certificate.name }} -n {{ .Release.Namespace }}
+3. Use the certificate in your Ingress resources by referencing the secret: {{ .Values.certificate.secretName }}
+
+📋 Example Ingress configuration:
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  tls:
+  - hosts:
+    - "subdomain.ibytechaos.com"
+    secretName: {{ .Values.certificate.secretName }}
+  rules:
+  - host: "subdomain.ibytechaos.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: your-service
+            port:
+              number: 80
+
+🔍 Monitoring:
+- Check ClusterIssuer status: kubectl get clusterissuer {{ .Values.clusterIssuer.name }}
+- Check Certificate status: kubectl describe certificate {{ .Values.certificate.name }} -n {{ .Release.Namespace }}
+- Check certificate secret: kubectl get secret {{ .Values.certificate.secretName }} -n {{ .Release.Namespace }}
+
+For more information, visit: https://ibytechaos.com
