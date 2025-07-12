@@ -19,15 +19,13 @@ clusterIssuer:
     # DNS01 solver for wildcard certificates (Tencent Cloud)
     - dns01:
         webhook:
-          groupName: acme.cert-manager.io
+          groupName: acme.dnspod.com
           solverName: dnspod
           config:
-            region: "{{ .Values.tencentCloud.region }}"
+            region: true  # Will be replaced by template with actual region value
             secretId:
-              secretName: "{{ .Values.tencentCloud.secretName }}"
               key: "secret-id"
             secretKey:
-              secretName: "{{ .Values.tencentCloud.secretName }}"
               key: "secret-key"
       # For wildcard certificates
       selector:
