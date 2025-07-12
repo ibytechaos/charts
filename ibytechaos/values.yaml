@@ -57,13 +57,10 @@ certificate:
     group: cert-manager.io
   # Common name for the certificate
   commonName: "*.ibytechaos.com"
-  # DNS names covered by this certificate (wildcard + specific domains)
+  # DNS names covered by this certificate (wildcard + root domain only)
   dnsNames:
     - "*.ibytechaos.com"
     - "ibytechaos.com"
-    - "www.ibytechaos.com"
-    - "api.ibytechaos.com"
-    - "app.ibytechaos.com"
   # Certificate duration (90 days by default)
   duration: "2160h" # 90 days
   # Certificate renewal time (30 days before expiry)
