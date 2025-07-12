@@ -13,7 +13,7 @@ logLevel: info
 
 certManager:
   namespace: cert-manager
-  serviceAccountName: cert-manager
+  serviceAccountName: cert-manager-controller
 
 image:
   repository: imroc/cert-manager-webhook-dnspod

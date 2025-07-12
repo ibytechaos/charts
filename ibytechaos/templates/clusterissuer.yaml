@@ -42,13 +42,13 @@ spec:
             region: {{ $.Values.tencentCloud.region }}
             {{- end }}
             {{- if .dns01.webhook.config.secretId }}
-            secretId:
-              secretName: {{ $.Values.tencentCloud.secretName }}
+            secretIdRef:
+              name: {{ $.Values.tencentCloud.secretName }}
               key: {{ .dns01.webhook.config.secretId.key }}
             {{- end }}
             {{- if .dns01.webhook.config.secretKey }}
-            secretKey:
-              secretName: {{ $.Values.tencentCloud.secretName }}
+            secretKeyRef:
+              name: {{ $.Values.tencentCloud.secretName }}
               key: {{ .dns01.webhook.config.secretKey.key }}
             {{- end }}
           {{- end }}

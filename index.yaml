@@ -3,7 +3,20 @@ entries:
   cert-manager-webhook-dnspod:
   - apiVersion: v2
     appVersion: 1.5.2
-    created: "2025-07-12T21:50:00.20101+08:00"
+    created: "2025-07-12T22:06:12.571458+08:00"
+    description: cert-manager webhook solver for DNSPod
+    digest: a326f6fd501de9f8c88561c2e2cc968601486d72e57b9e7de7839b5a60d74d37
+    maintainers:
+    - email: roc@imroc.cc
+      name: imroc
+    name: cert-manager-webhook-dnspod
+    type: application
+    urls:
+    - https://wuzhipeng.github.io/charts/cert-manager-webhook-dnspod-1.5.4.tgz
+    version: 1.5.4
+  - apiVersion: v2
+    appVersion: 1.5.2
+    created: "2025-07-12T22:06:12.571155+08:00"
     description: cert-manager webhook solver for DNSPod
     digest: 3ca6c0bf005cacf393ff22fd4f8b2890d393199f953283901b9f13186c7b7ceb
     maintainers:
@@ -16,7 +29,7 @@ entries:
     version: 1.5.3
   - apiVersion: v2
     appVersion: 1.5.2
-    created: "2025-07-12T21:50:00.200781+08:00"
+    created: "2025-07-12T22:06:12.570919+08:00"
     description: cert-manager webhook solver for DNSPod
     digest: 70526bd0a99ff9b0f5cdb8b44c253a045e21c8e50414ad361e41dfa1fefae6ca
     maintainers:
@@ -30,7 +43,31 @@ entries:
   ibytechaos:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T21:50:00.201439+08:00"
+    created: "2025-07-12T22:06:12.572007+08:00"
+    description: Certificate management chart for ibytechaos.com with traefik and
+      cert-manager integration
+    digest: 2350cb21a0fb1a4c1ca5489be154c620da6c7eea362dd8d7c81022babcaec450
+    home: https://ibytechaos.com
+    keywords:
+    - certificate
+    - cert-manager
+    - traefik
+    - https
+    - wildcard
+    maintainers:
+    - name: ibytechaos
+      url: https://ibytechaos.com
+    name: ibytechaos
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - https://wuzhipeng.github.io/charts/ibytechaos-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-12T22:06:12.571745+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 48765e3b4762aef1d04f47fcacf146262e0dccef75e67a8c14546dd475de0e89
@@ -54,7 +91,7 @@ entries:
     version: 1.0.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T21:50:00.202692+08:00"
+    created: "2025-07-12T22:06:12.573946+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: aaa4e6bb4c63ede4a802456b3465a0127b8cabd314c42b7e41596a45b1aed0cb
@@ -78,7 +115,7 @@ entries:
     version: 1.0.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T21:50:00.202448+08:00"
+    created: "2025-07-12T22:06:12.573248+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: d02f3764e9f4897bd6c5b5d833bc4df57c7ed97f665f5e670db614d63a148b31
@@ -102,7 +139,7 @@ entries:
     version: 1.0.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T21:50:00.202186+08:00"
+    created: "2025-07-12T22:06:12.572657+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 43955468cf4ffc00042f6cdc622ad9906d3e87b7d08d89a459e2c39b11750fc3
@@ -126,7 +163,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T21:50:00.201944+08:00"
+    created: "2025-07-12T22:06:12.572432+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: e1de4a7c7442b4c66e196e8c953e5dc73aee0fada18feb590c8fbd7b93b79206
@@ -150,7 +187,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T21:50:00.201709+08:00"
+    created: "2025-07-12T22:06:12.572222+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 24652c0fdf91dc67dffa7efe48cbafbd04ba45cdbeffcce4dfeae88d38951cfc
@@ -175,7 +212,7 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T21:50:00.203575+08:00"
+    created: "2025-07-12T22:06:12.575014+08:00"
     description: A Helm chart for Mantrae application
     digest: 16cbe41d81acb7747908028555d5043d119a1a22cce26c3f802cd27e8ed73bf2
     name: mantrae
@@ -185,7 +222,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T21:50:00.203326+08:00"
+    created: "2025-07-12T22:06:12.574736+08:00"
     description: A Helm chart for Mantrae application
     digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
@@ -195,7 +232,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T21:50:00.203109+08:00"
+    created: "2025-07-12T22:06:12.574484+08:00"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -205,7 +242,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T21:50:00.202897+08:00"
+    created: "2025-07-12T22:06:12.574225+08:00"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -216,7 +253,7 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-12T21:50:00.203806+08:00"
+    created: "2025-07-12T22:06:12.57529+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: e04776c976fc2196e61bd54bf2fed708c4b3538fe3f73fdc202ea1be682d26c3
@@ -225,4 +262,4 @@ entries:
     urls:
     - https://wuzhipeng.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-12T21:50:00.200007+08:00"
+generated: "2025-07-12T22:06:12.57057+08:00"
