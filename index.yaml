@@ -3,10 +3,34 @@ entries:
   ibytechaos:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:00:37.647000871Z"
+    created: "2025-07-12T13:10:16.49444707Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
-    digest: 0cac0aaa4f8c43f7a30a4f14eaee4ac5793b08dc996d8ee9491b54f43b864245
+    digest: 364bcc46549ad0fe67b49f5e981a64c311cf90bc0787f506571b5088389d00de
+    home: https://ibytechaos.com
+    keywords:
+    - certificate
+    - cert-manager
+    - traefik
+    - https
+    - wildcard
+    maintainers:
+    - name: ibytechaos
+      url: https://ibytechaos.com
+    name: ibytechaos
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - https://ibytechaos.github.io/charts/charts/ibytechaos-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-12T13:10:16.4940336Z"
+    description: Certificate management chart for ibytechaos.com with traefik and
+      cert-manager integration
+    digest: d02f3764e9f4897bd6c5b5d833bc4df57c7ed97f665f5e670db614d63a148b31
     home: https://ibytechaos.com
     keywords:
     - certificate
@@ -27,7 +51,7 @@ entries:
     version: 1.0.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:00:37.646301556Z"
+    created: "2025-07-12T13:10:16.493638987Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 43955468cf4ffc00042f6cdc622ad9906d3e87b7d08d89a459e2c39b11750fc3
@@ -51,7 +75,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:00:37.645675037Z"
+    created: "2025-07-12T13:10:16.493215218Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: e1de4a7c7442b4c66e196e8c953e5dc73aee0fada18feb590c8fbd7b93b79206
@@ -75,7 +99,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:00:37.645024293Z"
+    created: "2025-07-12T13:10:16.492853056Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 24652c0fdf91dc67dffa7efe48cbafbd04ba45cdbeffcce4dfeae88d38951cfc
@@ -100,9 +124,9 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:00:37.65077965Z"
+    created: "2025-07-12T13:10:16.49586946Z"
     description: A Helm chart for Mantrae application
-    digest: 858d5fc17516f4faa0e2ae13f083d292cb34a59ed123677574ee721908f04a10
+    digest: 2ae627e79f3a9cb2543dafe971701082ceb7c2bc2a97f4b3439dc0d7f9efd506
     name: mantrae
     type: application
     urls:
@@ -110,7 +134,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:00:37.650156277Z"
+    created: "2025-07-12T13:10:16.495500104Z"
     description: A Helm chart for Mantrae application
     digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
@@ -120,7 +144,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:00:37.649562811Z"
+    created: "2025-07-12T13:10:16.495112283Z"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -130,7 +154,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:00:37.648909812Z"
+    created: "2025-07-12T13:10:16.494777903Z"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -141,13 +165,13 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-12T13:00:37.651397523Z"
+    created: "2025-07-12T13:10:16.496230531Z"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
-    digest: 6b79f36fa10bad3c756007d64be9e4f2148b92bb557932f0588db8bbde4171f9
+    digest: 62891e541d823794b394807fef83ef94705308683418521c67048f7df03c5429
     name: stable-diffusion
     type: application
     urls:
     - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-12T13:00:37.64420969Z"
+generated: "2025-07-12T13:10:16.492283703Z"
