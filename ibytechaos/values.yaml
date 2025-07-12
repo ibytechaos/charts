@@ -16,14 +16,30 @@ clusterIssuer:
   privateKeySecretRef: "ibytechaos-issuer-key"
   # ACME challenge solver configuration
   solvers:
-    # HTTP01 solver using traefik ingress
-    - http01:
-        ingress:
-          class: traefik
-      # Selector for domains this solver applies to
+    # DNS01 solver for wildcard certificates (Tencent Cloud)
+    - dns01:
+        webhook:
+          groupName: acme.cert-manager.io
+          solverName: dnspod
+          config:
+            region: "{{ .Values.tencentCloud.region }}"
+            secretId:
+              secretName: "{{ .Values.tencentCloud.secretName }}"
+              key: "secret-id"
+            secretKey:
+              secretName: "{{ .Values.tencentCloud.secretName }}"
+              key: "secret-key"
+      # For wildcard certificates
       selector:
         dnsNames:
         - "*.ibytechaos.com"
+        - "ibytechaos.com"
+    # HTTP01 solver for apex domain
+    - http01:
+        ingress:
+          class: traefik
+      selector:
+        dnsNames:
         - "ibytechaos.com"
 
 # Certificate configuration
@@ -41,10 +57,13 @@ certificate:
     group: cert-manager.io
   # Common name for the certificate
   commonName: "*.ibytechaos.com"
-  # DNS names covered by this certificate
+  # DNS names covered by this certificate (wildcard + specific domains)
   dnsNames:
     - "*.ibytechaos.com"
     - "ibytechaos.com"
+    - "www.ibytechaos.com"
+    - "api.ibytechaos.com"
+    - "app.ibytechaos.com"
   # Certificate duration (90 days by default)
   duration: "2160h" # 90 days
   # Certificate renewal time (30 days before expiry)
@@ -63,6 +82,21 @@ certificate:
       - "San Francisco"
     provinces:
       - "CA"
+
+# Tencent Cloud DNS configuration
+tencentCloud:
+  # Tencent Cloud region (e.g., ap-beijing, ap-shanghai, ap-guangzhou)
+  region: "ap-beijing"
+  # Secret name containing Tencent Cloud API credentials (in cert-manager namespace)
+  secretName: "tencent-secret"
+  # Whether to create the secret (set to false if you create it manually)
+  createSecret: false
+  # Tencent Cloud SecretId (only used if createSecret is true)
+  secretId: ""
+  # Tencent Cloud SecretKey (only used if createSecret is true)
+  secretKey: ""
+  # Secret namespace (usually cert-manager)
+  secretNamespace: "cert-manager"
 
 # Global settings
 global:

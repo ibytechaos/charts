@@ -3,7 +3,55 @@ entries:
   ibytechaos:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T20:38:17.154008+08:00"
+    created: "2025-07-12T20:58:00.294679+08:00"
+    description: Certificate management chart for ibytechaos.com with traefik and
+      cert-manager integration
+    digest: d02f3764e9f4897bd6c5b5d833bc4df57c7ed97f665f5e670db614d63a148b31
+    home: https://ibytechaos.com
+    keywords:
+    - certificate
+    - cert-manager
+    - traefik
+    - https
+    - wildcard
+    maintainers:
+    - name: ibytechaos
+      url: https://ibytechaos.com
+    name: ibytechaos
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - https://ibytechaos.github.io/charts/charts/ibytechaos-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-12T20:58:00.294408+08:00"
+    description: Certificate management chart for ibytechaos.com with traefik and
+      cert-manager integration
+    digest: 43955468cf4ffc00042f6cdc622ad9906d3e87b7d08d89a459e2c39b11750fc3
+    home: https://ibytechaos.com
+    keywords:
+    - certificate
+    - cert-manager
+    - traefik
+    - https
+    - wildcard
+    maintainers:
+    - name: ibytechaos
+      url: https://ibytechaos.com
+    name: ibytechaos
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - https://ibytechaos.github.io/charts/charts/ibytechaos-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-07-12T20:58:00.294158+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: e1de4a7c7442b4c66e196e8c953e5dc73aee0fada18feb590c8fbd7b93b79206
@@ -27,7 +75,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T20:38:17.15358+08:00"
+    created: "2025-07-12T20:58:00.293936+08:00"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 24652c0fdf91dc67dffa7efe48cbafbd04ba45cdbeffcce4dfeae88d38951cfc
@@ -52,7 +100,7 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T20:38:17.155519+08:00"
+    created: "2025-07-12T20:58:00.295913+08:00"
     description: A Helm chart for Mantrae application
     digest: 16cbe41d81acb7747908028555d5043d119a1a22cce26c3f802cd27e8ed73bf2
     name: mantrae
@@ -62,7 +110,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T20:38:17.155212+08:00"
+    created: "2025-07-12T20:58:00.29537+08:00"
     description: A Helm chart for Mantrae application
     digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
@@ -72,7 +120,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T20:38:17.154947+08:00"
+    created: "2025-07-12T20:58:00.295142+08:00"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -82,7 +130,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T20:38:17.154684+08:00"
+    created: "2025-07-12T20:58:00.294896+08:00"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -93,7 +141,7 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-12T20:38:17.155772+08:00"
+    created: "2025-07-12T20:58:00.296297+08:00"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
     digest: e04776c976fc2196e61bd54bf2fed708c4b3538fe3f73fdc202ea1be682d26c3
@@ -102,4 +150,4 @@ entries:
     urls:
     - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-12T20:38:17.153218+08:00"
+generated: "2025-07-12T20:58:00.293603+08:00"
