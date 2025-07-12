@@ -6,4 +6,4 @@ maintainers:
   name: imroc
 name: cert-manager-webhook-dnspod
 type: application
-version: 1.5.2
+version: 1.5.3

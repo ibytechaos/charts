@@ -32,7 +32,27 @@ spec:
       {{- end }}
       {{- if .dns01 }}
       dns01:
-        {{- toYaml .dns01 | nindent 8 }}
+        {{- if .dns01.webhook }}
+        webhook:
+          groupName: {{ .dns01.webhook.groupName }}
+          solverName: {{ .dns01.webhook.solverName }}
+          {{- if .dns01.webhook.config }}
+          config:
+            {{- if .dns01.webhook.config.region }}
+            region: {{ $.Values.tencentCloud.region }}
+            {{- end }}
+            {{- if .dns01.webhook.config.secretId }}
+            secretId:
+              secretName: {{ $.Values.tencentCloud.secretName }}
+              key: {{ .dns01.webhook.config.secretId.key }}
+            {{- end }}
+            {{- if .dns01.webhook.config.secretKey }}
+            secretKey:
+              secretName: {{ $.Values.tencentCloud.secretName }}
+              key: {{ .dns01.webhook.config.secretKey.key }}
+            {{- end }}
+          {{- end }}
+        {{- end }}
       {{- end }}
       {{- if .selector }}
       selector:
