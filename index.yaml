@@ -1,12 +1,26 @@
 apiVersion: v1
 entries:
+  cert-manager-webhook-dnspod:
+  - apiVersion: v2
+    appVersion: 1.5.2
+    created: "2025-07-12T13:32:02.688391309Z"
+    description: cert-manager webhook solver for DNSPod
+    digest: 7067a7940d0b0c0d682321c3111134f9704301e7f130202bfff507b94d10b406
+    maintainers:
+    - email: roc@imroc.cc
+      name: imroc
+    name: cert-manager-webhook-dnspod
+    type: application
+    urls:
+    - https://ibytechaos.github.io/charts/charts/cert-manager-webhook-dnspod-1.5.2.tgz
+    version: 1.5.2
   ibytechaos:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:10:16.49444707Z"
+    created: "2025-07-12T13:32:02.690606441Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
-    digest: 364bcc46549ad0fe67b49f5e981a64c311cf90bc0787f506571b5088389d00de
+    digest: 88b85cb7d63a1fedb8d1ec9686840fb71f835963a4de7b02d96ba71d78aae250
     home: https://ibytechaos.com
     keywords:
     - certificate
@@ -27,7 +41,7 @@ entries:
     version: 1.0.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:10:16.4940336Z"
+    created: "2025-07-12T13:32:02.690173743Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: d02f3764e9f4897bd6c5b5d833bc4df57c7ed97f665f5e670db614d63a148b31
@@ -51,7 +65,7 @@ entries:
     version: 1.0.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:10:16.493638987Z"
+    created: "2025-07-12T13:32:02.689771281Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 43955468cf4ffc00042f6cdc622ad9906d3e87b7d08d89a459e2c39b11750fc3
@@ -75,7 +89,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:10:16.493215218Z"
+    created: "2025-07-12T13:32:02.689386382Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: e1de4a7c7442b4c66e196e8c953e5dc73aee0fada18feb590c8fbd7b93b79206
@@ -99,7 +113,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-07-12T13:10:16.492853056Z"
+    created: "2025-07-12T13:32:02.689002115Z"
     description: Certificate management chart for ibytechaos.com with traefik and
       cert-manager integration
     digest: 24652c0fdf91dc67dffa7efe48cbafbd04ba45cdbeffcce4dfeae88d38951cfc
@@ -124,9 +138,9 @@ entries:
   mantrae:
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:10:16.49586946Z"
+    created: "2025-07-12T13:32:02.691988091Z"
     description: A Helm chart for Mantrae application
-    digest: 2ae627e79f3a9cb2543dafe971701082ceb7c2bc2a97f4b3439dc0d7f9efd506
+    digest: 1c755312d3c26c9f595e1ce77f42c217afcca7242c75515bce4be9e4d4b28856
     name: mantrae
     type: application
     urls:
@@ -134,7 +148,7 @@ entries:
     version: 1.0.3
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:10:16.495500104Z"
+    created: "2025-07-12T13:32:02.691630664Z"
     description: A Helm chart for Mantrae application
     digest: 5a141c212d48b3c7749e7ff236845ab91d49ea6a1afd694fb57ac6f451ccc858
     name: mantrae
@@ -144,7 +158,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:10:16.495112283Z"
+    created: "2025-07-12T13:32:02.691274709Z"
     description: A Helm chart for Mantrae application
     digest: 613f576c53253fd1fd222af64d6cb96bb6f3b1a9bebead9e8efaa19bf679712e
     name: mantrae
@@ -154,7 +168,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: latest
-    created: "2025-07-12T13:10:16.494777903Z"
+    created: "2025-07-12T13:32:02.690928102Z"
     description: A Helm chart for Mantrae application
     digest: f26600b1ab0758b4f2d78e18adc2fee39b39a1698f96af17ccf3c25e9c6722cd
     name: mantrae
@@ -165,13 +179,13 @@ entries:
   stable-diffusion:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2025-07-12T13:10:16.496230531Z"
+    created: "2025-07-12T13:32:02.692342172Z"
     description: Packaged Stable Diffusion with a companion UI and automatic model
       retrieval
-    digest: 62891e541d823794b394807fef83ef94705308683418521c67048f7df03c5429
+    digest: cc734ff18d737518db01fadd3184b36ecf51cf7ce94e4f49de96f8ace1d55bc8
     name: stable-diffusion
     type: application
     urls:
     - https://ibytechaos.github.io/charts/charts/stable-diffusion-1.0.6.tgz
     version: 1.0.6
-generated: "2025-07-12T13:10:16.492283703Z"
+generated: "2025-07-12T13:32:02.687316271Z"
